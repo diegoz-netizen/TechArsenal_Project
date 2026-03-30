@@ -1,12 +1,12 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db = "tech_arsenal";
+require_once __DIR__ . '/../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
 
-$conexion = mysqli_connect($host, $user, $pass, $db);
-
-if (!$conexion) {
-    die("Conexión fallida: " . mysqli_connect_error());
-}
+$conexion = mysqli_connect(
+    $_ENV['DB_HOST'], 
+    $_ENV['DB_USER'], 
+    $_ENV['DB_PASS'], 
+    $_ENV['DB_NAME']
+);
 ?>

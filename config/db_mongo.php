@@ -1,5 +1,7 @@
 <?php
-    require 'vendor/autoload.php';
-    $cliente = new MongoDB\Client("mongodb+srv://usuario:password@cluster.mongodb.net/");
-    $db = $cliente->mi_tienda_hadware;
+require_once __DIR__ . '/../vendor/autoload.php';
+// El dotenv ya se cargó en el archivo anterior o pueden cargarlo aquí también
+
+$cliente = new MongoDB\Client($_ENV['MONGO_URI']);
+$db = $cliente->tech_arsenal;
 ?>
