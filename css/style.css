@@ -1,0 +1,14 @@
+:root {
+    --bg-dark: #09090b;
+    --card-bg: #18181b;
+    --neon-cyan: #22d3ee;
+    --neon-purple: #a855f7;
+    --text-main: #f4f4f5;
+    --text-dim: #a1a1aa;
+}
+body { background-color: var(--bg-dark); color: var(--text-main); font-family: sans-serif; margin: 0; }
+.btn-primary {
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+    color: white; border: none; padding: 12px; border-radius: 8px;
+    font-weight: bold; cursor: pointer; width: 100%;
+}
